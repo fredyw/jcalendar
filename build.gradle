@@ -9,13 +9,16 @@ repositories {
 
 dependencies {
     if (System.getProperty("os.name").toLowerCase().contains("linux")) {
-        if (System.getProperty("os.arch").equals("x86")) {
+        System.out.println(System.getProperty("os.arch"))
+        if (System.getProperty("os.arch").equals("x86")
+            || System.getProperty("os.arch").equals("i386")) {
             compile ":swt-4.2.2-gtk-linux-x86"
         } else { // assume it's 64-bit
             compile ":swt-4.2.2-gtk-linux-x86_64"
         }
     } else if (System.getProperty("os.name").toLowerCase().contains("win")) {
-        if (System.getProperty("os.arch").equals("x86")) {
+        if (System.getProperty("os.arch").equals("x86")
+            || System.getProperty("os.arch").equals("i386")) {
          compile ":swt-4.2.2-win32-win32-x86"
         } else { // assume it's 64-bit
             compile ":swt-4.2.2-win32-win32-x86_64"

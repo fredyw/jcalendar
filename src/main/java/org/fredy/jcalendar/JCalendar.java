@@ -1,5 +1,5 @@
 /* 
- * Copyright 2012 Fredy Wijaya
+ * Copyright 2013 Fredy Wijaya
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -46,7 +46,7 @@ public class JCalendar {
     private static Table calendarTable;
      
     private static void updateDate(Calendar calendar) {
-        dateLabel.setText(new SimpleDateFormat("MMM YYYY").format(calendar.getTime()));
+        dateLabel.setText(new SimpleDateFormat("MMM yyyy").format(calendar.getTime()));
     }
      
     private static void createNavigation(final Shell shell, final Calendar calendar) {
